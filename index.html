@@ -2,792 +2,727 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>导航栏名称</title>
-    <style type="text/css">
-    * {
+    <title>导航栏名字</title>
+    <style>
+    :root {
+    --primary-red: #bf0404;
+    --text-dark: #333;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    /* padding: 20px; */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-}
-
-.header-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 180px;
-    /* 背景图高度 */
-    z-index: 1000;
-}
-
-.header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background: url('back.jpg') center/cover; */
-    /* background: url('https://raw.githubusercontent.com/wmy0322/20250424/main/pic/back.jpeg') center/cover; */
-    background: url('https://raw.githubusercontent.com/wmy0322/20250424/main/pic/backk.jpg') center/cover;
-    filter: brightness(0.9);
-}
-
-.header-content {
-    position: relative;
-    /* z-index: 1000; */
-    padding: 20px 40px;
-    /* background: linear-gradient( to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.08) 25%, rgba(255, 255, 255, 0.2) 100%); */
-    /* 保持原有头部样式 */
+    font-family: "Microsoft YaHei", sans-serif;
 }
 
 
-/* 头部样式 */
+/* 一级导航 */
 
 .header {
-    position: fixed;
-    top: 12px;
-    left: 0;
-    right: 0;
-    height: 70px;
-    /* background: rgba(255, 255, 255, 0.651); */
-    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    /* background: var(--primary-red); */
+    /* background: rgb(91, 177, 223); */
+    padding: 10px 30px;
     display: flex;
-    align-items: center;
-    padding: 0 40px;
-    z-index: 1000;
+    justify-content: space-between;
+    color: var(--primary-red);
+    height: 90px;
+    margin-bottom: 10px;
 }
 
-
-/* 学校Logo */
+.gov-brand {
+    margin-left: 4%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 30px;
+    font-weight: 600;
+    /* background-color: aqua; */
+    height: 80px;
+}
 
 .school-logo {
+    margin-top: 10px;
     height: 60px;
-    margin-right: 30px;
 }
 
-
-/* 主标题 */
-
-.main-title {
-    position: absolute;
-    left: 170px;
-    font-size: 35px;
-    color: #303133;
-    font-weight: 600;
-    letter-spacing: 2px;
-    /* background: linear-gradient(135deg, #409EFF, #337ecc); */
-    /* background: linear-gradient(135deg, #0538c5, #0b58de); */
-    background: rgb(1, 12, 96);
-    /*字体颜色*/
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-
-/* 登录按钮 */
-
-.login-btn {
-    margin-left: auto;
-    padding: 8px 25px;
-    background: #409EFF;
-    color: white;
-    border: none;
-    border-radius: 20px;
+.header-links span {
+    margin-left: 20px;
     cursor: pointer;
-    transition: all 0.3s;
-    font-size: 16px;
+    /* background-color: aquamarine; */
 }
 
-.login-btn:hover {
-    background: #337ecc;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(64, 158, 255, 0.4);
+
+/* 二级导航 */
+
+.main-nav {
+    padding: 15px 30px;
 }
 
-#search-container {
-    /* padding: 15px 20px; */
-    /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); */
+.nav-items {
     display: flex;
-    /* gap: 10px; */
-    justify-content: center;
-    /* background-image: linear-gradient(to bottom, rgba(229, 226, 226, 0.205), rgb(255, 255, 255)), url("back.jpg");
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; */
-    margin-top: 80px;
-    /* 在背景图中居中 */
-}
-
-.search-box {
-    width: 80%;
-    max-width: 1200px;
-    padding: 12px 25px;
-    border: 2px solid #409EFF;
-    border-radius: 30px;
+    gap: 40px;
+    list-style: none;
+    transition: all 0.2s;
+    margin-left: 4%;
     font-size: 16px;
-    /* background: rgb(152, 53, 53); */
+    font-weight: 800;
+}
+
+.nav-item {
+    /* color: white; */
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item.active {
+    /* border-color: white; */
+    border-color: var(--primary-red);
+}
+
+.nav-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-red);
+    border-bottom: 3px solid #cc0000;
 }
 
 
-/* 导航内容容器 */
+/* 二级父区域 */
 
-.nav-container {
-    position: relative;
-    z-index: 950;
-    margin-top: 180px;
-    /* 与背景图高度一致 */
-    /* background: white; */
-    /* box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1); */
-    /* position: sticky; */
-    /* top: 400px; */
-    /* 粘性定位起始位置 */
-    /* display: flex; */
-    float: left;
+.fullcontainer {
+    /* max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 30px; */
     width: 100%;
-    /* gap: 20px; */
-    padding: 20px 0;
-    /* background-color: chocolate; */
+    background-color: #cc0000cb;
+    padding: 0 5.5%;
 }
+
+#mainTitle {
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+    font-weight: 400;
+    /* background-color: aqua; */
+    margin-bottom: 55px;
+}
+
+
+/* 二级导航 */
+
+.category-tabs {
+    display: flex;
+    gap: 7px;
+    /* margin: 20px 0; */
+    border-bottom: 2px solid #eee;
+}
+
+.category-tab {
+    background: rgba(255, 255, 255, 0.233);
+    cursor: pointer;
+    color: white;
+    padding: 15px 35px;
+    font-size: 21px;
+    transition: all 0.3s;
+    /* color: var(--text-dark); */
+}
+
+.category-tab.active {
+    color: var(--primary-red);
+    background-color: white;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+.category-tab:hover {
+    color: var(--primary-red);
+    background-color: white;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+
+/* 三级父区域 */
 
 .container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    /* background-color: aqua; */
-}
-
-.left-sidebar {
-    width: 13%;
-    min-width: 150px;
-    float: left;
-    /* background: rgb(35, 184, 214); */
-    /* padding: 20px; */
-    padding-left: 0;
-    /* 新增：清除 ul 的默认 padding */
-    position: sticky;
-    top: 20px;
-    font-size: 23px;
-    /* box-shadow: 5px 0 10px rgba(0, 0, 0, 0.463); */
-    /* 关键代码：右侧阴影，且不扩散到上下 */
-    box-shadow: 5px 0 10px -5px rgba(0, 0, 0, 0.657);
-    /* background: #fff; */
-    /* 确保背景为纯白色 */
-}
-
-.left-sidebar ul {
-    padding-left: 0;
-    /* 重置默认 padding */
-    margin: 0;
-    /* 重置默认 margin */
-    list-style: none;
-    /* 防止列表符号 */
-}
-
-.left-sidebar li {
-    padding-top: 8px;
-    align-items: center;
-    list-style: none;
-    /* text-decoration: none; */
-    border-radius: 8px;
-    /* background-color: #f5f7fa; */
-    /* transition: all 0.3s; */
-    /* color: #606266; */
-}
-
-.left-sidebar li a {
-    /* align-items: center;
-    list-style: none;
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: #f5f7fa;
-    transition: all 0.3s;
-    color: #37383a; */
-    display: flex;
-    /* 将 a 标签转为 Flex 容器 */
-    align-items: center;
-    /* 垂直居中 */
-    justify-content: center;
-    /* 水平居中 */
-    height: 100%;
-    /* 确保 a 标签填充整个 li 高度 */
-    text-decoration: none;
-    color: #37383a;
-}
-
-.left-sidebar li:hover {
-    align-items: center;
-    /* background-color: rgba(147, 147, 147, 0.534); */
-    background-color: #40a0ff4e;
-    /* transform: translateY(-3px); */
-    color: white;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 30px;
 }
 
 
-/* 参考这个改样式
-///TODO
-.link-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f5f7fa;
-    transition: all 0.3s;
-    text-decoration: none;
-    color: #606266;
-}
+/* 三级导航样式 */
 
-.link-item:hover {
-    background-color: #409EFF;
-    color: white;
-    transform: translateY(-3px);
+
+/* .tertiary-nav {
+    margin: 30px 0 15px;
+    padding-left: 60px;
+    padding-right: 60px;
 } */
 
-.right-content {
-    float: left;
-    width: 85%;
-    margin-left: 1%;
-    /* padding: 20px; */
-    /* background: rgb(198, 69, 69); */
-    min-height: 800px;
-    /* 示例高度 */
+.tertiary-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    /* 处理某些浏览器边框 */
+    background: white;
+    z-index: 100;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid transparent;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
-.category {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+.tertiary-nav.sticky-border {
+    border-bottom: 2px solid #f10606;
 }
 
-.category h2 {
-    color: #303133;
+.tertiary-tabs {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tertiary-tabs::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-bottom: 2px dashed #ccc;
+    z-index: 1;
+}
+
+.tertiary-tab {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 45px;
+    /* 给圆点预留空间 */
+}
+
+.tertiary-tab::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-red);
+}
+
+
+/* 服务卡片 */
+
+.service-group {
+    margin: 30px 5px;
+}
+
+.service-group h3 {
+    color: var(--text-dark);
+    font-size: 18px;
     margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #409EFF;
+    padding-left: 8px;
+    border-left: 3px solid var(--primary-red);
 }
 
-.links {
+.service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 15px;
 }
 
-.link-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f5f7fa;
-    transition: all 0.3s;
-    text-decoration: none;
-    color: #606266;
-}
-
-.link-item:hover {
-    background-color: #409EFF;
-    color: white;
-    transform: translateY(-3px);
-}
-
-.link-item img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.active-category {
-    display: block !important;
-}
-
-.no-results {
+.service-card {
+    padding: 25px 40px;
     text-align: center;
-    padding: 40px;
-    font-size: 18px;
-    color: #909399;
-    display: none;
-    /* 初始隐藏 */
-    background: white;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    /* border-radius: 4px; */
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.198);
+    text-decoration: none;
+    color: var(--text-dark);
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        height: 300px;
-    }
-    .nav-container {
-        margin-top: 300px;
-        padding-top: 20px;
-    }
-    .search-container {
-        margin-top: 80px;
-    }
-    .header {
-        padding: 0 20px;
-        height: 60px;
-    }
-    .school-logo {
-        height: 40px;
-        margin-right: 15px;
-    }
-    .main-title {
-        font-size: 20px;
-        left: 100px;
-    }
-    .login-btn {
-        padding: 6px 15px;
-        font-size: 14px;
-    }
-    .links {
-        grid-template-columns: 1fr;
-    }
-    .search-container {
-        padding: 10px;
-    }
-    .search-box {
-        width: 70%;
-        padding: 10px 20px;
-    }
-    .container {
-        margin-top: 200px;
-    }
+.service-card:hover {
+    transform: translateY(-2px);
+    background-color: var(--primary-red);
+    color: white;
+    transition: all 0.4s;
 }
-    </style>
+    </style>  
+   
 </head>
-
-
 <body>
-    <div class="header-container">
-        <div class="header-bg"></div>
-
-        <div class="header-content">
-            <header class="header">
-                <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo">
-                <h1 class="main-title">学生服务大厅导航栏</h1>
-                <button class="login-btn" onclick="window.location.href='/login'">用户登录</button>                
-            </header>
-        
-
-            <div id="search-container">
-                <input type="text" class="search-box" placeholder="搜索网站...">
-            </div>
-            
+    <!-- 顶部导航 -->
+    <div class="header">
+        <div class="gov-brand">
+             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo">北京理工大学
+             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo" style="margin-left:50px;">学生服务中心
+        </div>
+        <div class="header-links">
+            <span>登录</span>
         </div>
     </div>
 
-    <!-- 导航内容区 --> 
-    <div class="nav-container">
+    <!-- 主导航 -->
+    <nav class="main-nav">
+        <ul class="nav-items">
+            <li class="nav-item active" data-level1="L1个人服务">L1个人服务</li>
+            <li class="nav-item" data-level1="L1法人服务">L1法人服务</li>
+            <li class="nav-item" data-level1="L1部门服务">L1部门服务</li>
+            <li class="nav-item" data-level1="L1便民服务">L1便民服务</li>
+            <li class="nav-item" data-level1="L1标题名称5">L1标题名称5</li>
+            <li class="nav-item" data-level1="L1标题名称6">L1标题名称6</li>
+            
+        </ul>
+    </nav>
+
+    <!-- 内容区域 -->
+    <div class="fullcontainer" >
+
+        <h1 id="mainTitle">北京市法人服务</h1>
         
-        <!-- 添加无结果提示 -->
-        <div class="no-results">暂无相关结果</div>
-
-        
-        <div class="container">          
-            <!-- 左侧导航栏 -->
-            <div class="left-sidebar">
-                <ul id="left-nav"></ul>
-            </div>
-         
-             <!-- 右侧内容区 -->
-            <div class="right-content">
-                <div class="categories-list" >
-                    <div class="category" id="cat1">
-                        <h2>分类一</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                百度
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                谷歌
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat2">
-                        <h2>分类二</h2>
-                        <div class="links">
-                            <a href="https://github.com" class="link-item" target="_blank">
-                                <img src="https://github.com/favicon.ico" alt="GitHub">
-                                GitHub
-                            </a>
-                            <a href="https://stackoverflow.com" class="link-item" target="_blank">
-                                <img src="https://stackoverflow.com/favicon.ico" alt="Stack Overflow">
-                                Stack Overflow
-                            </a>
-                            
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat3">
-                        <h2>分类三</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                百度文库
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                谷歌
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    
-                    <div class="category" id="cat4">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xxxxxxxxxxxxx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-
-                        </div>
-                    </div>
-
-                    
-                    <div class="category" id="cat5">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat6">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat7">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat8">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat9">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat10">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="category" id="cat5">
-                        <h2>分类x</h2>
-                        <div class="links">
-                            <a href="https://www.baidu.com" class="link-item" target="_blank">
-                                <img src="https://www.baidu.com/favicon.ico" alt="百度">
-                                xx
-                            </a>
-                            <a href="https://www.google.com" class="link-item" target="_blank">
-                                <img src="https://www.google.com/favicon.ico" alt="谷歌">
-                                yy
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- 二级导航条 -->
+        <div class="category-tabs" id="categoryTabs"></div>
+    
     </div>
+    
+    <!-- 新增三级导航条 -->
+    <div class="container">
+        <div class="tertiary-nav">
+            <div class="tertiary-tabs" id="tertiaryTabs"></div>
+        </div>
 
-
-    <script>
-        // 初始化数据
-        const searchBox = document.querySelector('.search-box');
-        const noResults = document.querySelector('.no-results');
-        const linkItems = document.querySelectorAll('.link-item');
-        const categories = document.querySelectorAll('.category');
-        const leftNav = document.getElementById('left-nav');
-
-        // 初始化左侧导航
-        function initLeftNav() {
-            categories.forEach(category => {
-                const categoryId = category.id;
-                const categoryName = category.querySelector('h2').textContent;
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = `#${categoryId}`;
-                a.textContent = categoryName;
-                a.addEventListener('click', handleNavClick);
-                li.appendChild(a);
-                leftNav.appendChild(li);
-            });
-        }
-        initLeftNav();
-
-        // 处理导航点击
-        function handleNavClick(e) {
-            e.preventDefault();
-            const targetId = e.target.getAttribute('href').substring(1);  
-            const targetCategory = document.getElementById(targetId);
-            
-            // 获取目标元素距离页面顶部的位置
-            const targetPosition = targetCategory.getBoundingClientRect().top + window.pageYOffset;
-            
-            // 计算需要滚动到的位置（目标位置 - 180px）
-            const offsetPosition = targetPosition - 180;
-
-            // 平滑滚动到计算后的位置
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-
-            // 更新搜索状态
-            searchBox.value = '';
-        }
-
-
-        // 更新搜索结果        
-        searchBox.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase().trim();
-            let totalVisible = 0;; // 标识 检索结果 的数量
-            
-            // 遍历所有链接项，根据搜索词过滤显示            
-            linkItems.forEach(item => {
-                const text = item.textContent.toLowerCase();
-                const isVisible = text.includes(searchTerm);
-                item.style.display = isVisible ? 'flex' : 'none';
-                if (isVisible) totalVisible++;
-            });
-
-            //  遍历所有分类，隐藏无链接的分类
-            let visibleCategories = 0;
-            categories.forEach(category => {
-                const visibleLinks = category.querySelectorAll('.link-item[style*="display: flex"]');
-                const shouldShow = visibleLinks.length > 0;
-                category.style.display = shouldShow ? 'block' : 'none';                          
-
-                if (shouldShow) visibleCategories++;
-            });
-
-            // 处理分类显示与颜色
-            categories.forEach(category => {
-                const links = category.querySelectorAll('.link-item[style*="display: flex"]');
-                const showCategory = links.length > 0;
-                category.style.display = showCategory ? 'block' : 'none';
-                
-                // 更新分类标题颜色
-                const title = category.querySelector('h2');
-                if (showCategory) {
-                    title.classList.add('green-category');
-                } else {
-                    title.classList.remove('green-category');
-                }
-            });
+        <!-- 内容区域 -->
+        <div id="serviceContainer"></div>
+    </div>
+<script>
+// 完整数据结构
+const serviceData = {
+    "L1个人服务": {
+        "二级标题": {
+            "社保医保": [
+            {
+                name:"社保卡申领",
+                path:"https://www.baidu.com"
+            },
+            {
+                name:"医保报销申请",
+                path:"www.baidu.com"
                
-         
+            }],
+            "住房保障": ["公积金提取", "保障房申请"],
+            "三级标题1": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题2": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题3": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题4": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题5": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题6": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ]
+        },
+        "二级标题2": {
+            "三级标题1": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题2": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题3": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题4": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ]
+        },
+        "二级标题3": {
+            "三级标题1": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题2": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题3": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题4": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ]
+        },
+        "二级标题4": {
+            "三级标题1": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题2": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题3": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题4": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ]
+        },
+        "二级标题5": {
+            "三级标题1": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题2": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题3": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+            "三级标题4": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ]
+           
+        }
+    },
+    "L1法人服务": {
+        "热门分类L2": {
+            "社会保障": [
+                "单位为职工缴存住房公积金",
+                "住房公积金单位登记开户",
+                "单位为职工补缴住房公积金",
+                "清册核定",
+                "住房公积金缴存单位信息变更",
+                "单位申请住房公积金降低缴存比例、缓缴"                
+            ],
+            "准营准办": [
+                "北京地区图书、期刊印刷委托备案",
+                "变更广播电视节目制作经营许可",
+                "设立广播电视节目制作经营单位"
+            ],
+            "xxL3": [
+                "yyL4",
+                "yyL4",
+                "yyL4",
+                "yyL4",
+                "yyL4",
+                "yyL4"
+            ],
+            "准营准办": [
+                "北京地区图书、期刊印刷委托备案",
+                "变更广播电视节目制作经营许可",
+                "设立广播电视节目制作经营单位"
+            ],
+            
+        },
+        "主题分类": {
+            "资质认证": ["AAA信用等级认证", "质量管理体系认证"],
+            "安全生产": ["安全生产许可证申请", "危险化学品经营备案"],
+           
+        }
+    },
+    "L1部门服务": {
+        "常用服务": {
+            "社保医保": ["社保卡申领", "医保报销申请"],
+            "住房保障": ["公积金提取", "保障房申请"],
+             "三级标题": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+        }
+    },
+    "L1便民服务": {
+        "常用服务": {
+            "社保医保": ["社保卡申领", "医保报销申请"],
+            "住房保障": ["公积金提取", "保障房申请"],
+             "三级标题": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+        }
+    },
+    "L1标题名称5": {
+        "常用服务": {
+            "社保医保": ["社保卡申领", "医保报销申请"],
+            "住房保障": ["公积金提取", "保障房申请"],
+             "三级标题": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+        }
+    },
+    "L1标题名称6": {
+        "常用服务": {
+            "社保医保": ["社保卡申领", "医保报销申请"],
+            "住房保障": ["公积金提取", "保障房申请"],
+             "三级标题": [
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块",
+                "四级子模块"
+            ],
+        }
+    }
+};
 
-            // 控制“暂无相关结果”提示显示逻辑
-            if (searchTerm !== '' && totalVisible === 0) {
-                noResults.style.display = 'block';
-                categories.forEach(c => c.style.display = 'none');
-            } else {
-                noResults.style.display = 'none';
-            }
+// 默认选择状态
+let current = {
+    level1: "L1个人服务",
+    level2: "二级标题",
+    level3: "社会保障"
+};
 
-            // 当清空搜索框时显示所有分类
-            if (searchTerm === '') {
-                categories.forEach(c => c.style.display = 'block');
-                linkItems.forEach(i => i.style.display = 'flex');
-            }
-       });
+// 初始化
+function init() {
+    // 绑定一级导航点击
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelector('.nav-item.active').classList.remove('active');
+            this.classList.add('active');
+            current.level1 = this.dataset.level1;
+            current.level2 = Object.keys(serviceData[current.level1])[0];
+            current.level3 = Object.keys(serviceData[current.level1][current.level2])[0];
+            updateUI();
+        });
+    });
 
-      
+    updateUI();
+}
 
-       
-    </script>
+// 更新界面
+function updateUI() {
+    // 更新主标题
+    document.getElementById('mainTitle').textContent = `北京市${current.level1}`;
+
+    // 生成二级分类标签
+    const level2Options = Object.keys(serviceData[current.level1]);
+    document.getElementById('categoryTabs').innerHTML = level2Options.map(level2 => `
+        <div class="category-tab ${level2 === current.level2 ? 'active' : ''}" 
+             onclick="changeLevel2('${level2}')">${level2}</div>
+    `).join('');
+
+
+     // 生成三级导航
+    const level3Data = Object.keys(serviceData[current.level1][current.level2]);
+    const tertiaryTabs = document.getElementById('tertiaryTabs');
+    tertiaryTabs.innerHTML = level3Data.map(level3 => `
+        <div class="tertiary-tab" 
+             data-anchor="${level3}"
+             onclick="scrollToSection('${level3}')">
+            ${level3}
+        </div>
+    `).join('');
+
+    // 生成带锚点的服务内容
+    document.getElementById('serviceContainer').innerHTML = level3Data.map(level3 => `
+        <section id="${level3}" class="service-group">
+            <h3>${level3}</h3>
+            <div class="service-grid">
+                ${serviceData[current.level1][current.level2][level3].map(item => `
+                <a class="service-card"
+                   href="${item.path}" 
+                   target="${item.target || '_blank'}"  
+                   rel="noopener noreferrer">  
+                    ${item.icon || ''} <!-- 可显示图标，默认空-->
+                    ${item.name}
+                </a>
+            `).join('')}
+            </div>
+        </section>
+    `).join('');
+}
+
+// 切换二级分类
+function changeLevel2(level2) {
+    current.level2 = level2;
+    current.level3 = Object.keys(serviceData[current.level1][level2])[0];
+    updateUI();
+}
+
+// 启动初始化
+init();
+
+// 新增滚动逻辑
+function scrollToSection(anchorId) {
+    const target = document.getElementById(anchorId);
+    if (target) {
+        // 移除所有激活状态
+        document.querySelectorAll('.tertiary-tab').forEach(t => t.classList.remove('active'));
+        // 设置当前激活
+        document.querySelector(`[data-anchor="${anchorId}"]`).classList.add('active');
+        // 平滑滚动
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// 在现有script中添加滚动监听
+let lastScroll = 0;
+const tertiaryNav = document.querySelector('.tertiary-nav');
+
+function checkSticky() {
+    const rect = tertiaryNav.getBoundingClientRect();
+    const isSticky = rect.top <= 0;
+    
+    // 添加/移除边框类
+    tertiaryNav.classList.toggle('sticky-border', isSticky);
+    
+    // 优化滚动方向检测（可选）
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= lastScroll && currentScroll < 100) {
+        tertiaryNav.classList.remove('sticky-border');
+    }
+    lastScroll = currentScroll;
+}
+// 使用防抖优化性能
+let isTicking = false;
+window.addEventListener('scroll', () => {
+    if (!isTicking) {
+        window.requestAnimationFrame(() => {
+            checkSticky();
+            isTicking = false;
+        });
+        isTicking = true;
+    }
+});
+checkSticky();
+</script>
 </body>
 </html>
