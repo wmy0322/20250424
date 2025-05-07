@@ -1,270 +1,288 @@
-<!DOCTYPE html>
+f<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>导航栏名字</title>
+    <title>网上服务大厅（学生版）</title>
     <style>
-    :root {
-    --primary-red: #bf0404;
-    --text-dark: #333;
-}
+        :root {
+            --primary-red: #bf0404;
+            --text-dark: #333;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Microsoft YaHei", sans-serif;
-}
-
-
-/* 一级导航 */
-
-.header {
-    /* background: var(--primary-red); */
-    /* background: rgb(91, 177, 223); */
-    padding: 10px 30px;
-    display: flex;
-    justify-content: space-between;
-    color: var(--primary-red);
-    height: 90px;
-    margin-bottom: 10px;
-}
-
-.gov-brand {
-    margin-left: 4%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 30px;
-    font-weight: 600;
-    /* background-color: aqua; */
-    height: 80px;
-}
-
-.school-logo {
-    margin-top: 10px;
-    height: 60px;
-}
-
-.header-links span {
-    margin-left: 20px;
-    cursor: pointer;
-    /* background-color: aquamarine; */
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
 
 
-/* 二级导航 */
+        /* 一级导航 */
 
-.main-nav {
-    padding: 15px 30px;
-}
+        .header {
+            /* background: var(--primary-red); */
+            /* background: rgb(91, 177, 223); */
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            color: var(--primary-red);
+            height: 90px;
+            margin-bottom: 10px;
+        }
 
-.nav-items {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    transition: all 0.2s;
-    margin-left: 4%;
-    font-size: 16px;
-    font-weight: 800;
-}
+        .gov-brand {
+            margin-left: 4%;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 30px;
+            font-weight: 600;
+            /* background-color: aqua; */
+            height: 80px;
+        }
 
-.nav-item {
-    /* color: white; */
-    cursor: pointer;
-    padding-bottom: 5px;
-    border-bottom: 3px solid transparent;
-}
+        .school-logo {
+            margin-top: 10px;
+            height: 60px;
+        }
 
-.nav-item.active {
-    /* border-color: white; */
-    border-color: var(--primary-red);
-}
-
-.nav-item:hover {
-    transform: translateY(-2px);
-    border-color: var(--primary-red);
-    border-bottom: 3px solid #cc0000;
-}
-
-
-/* 二级父区域 */
-
-.fullcontainer {
-    /* max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 30px; */
-    width: 100%;
-    background-color: #cc0000cb;
-    padding: 0 5.5%;
-}
-
-#mainTitle {
-    padding-top: 50px;
-    font-size: 40px;
-    color: white;
-    font-weight: 400;
-    /* background-color: aqua; */
-    margin-bottom: 55px;
-}
+        .header-links span {
+            margin-left: 20px;
+            cursor: pointer;
+            /* background-color: aquamarine; */
+        }
 
 
-/* 二级导航 */
+        /* 二级导航 */
 
-.category-tabs {
-    display: flex;
-    gap: 7px;
-    /* margin: 20px 0; */
-    border-bottom: 2px solid #eee;
-}
+        .main-nav {
+            padding: 15px 30px;
+        }
 
-.category-tab {
-    background: rgba(255, 255, 255, 0.233);
-    cursor: pointer;
-    color: white;
-    padding: 15px 35px;
-    font-size: 21px;
-    transition: all 0.3s;
-    /* color: var(--text-dark); */
-}
+        .nav-items {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            transition: all 0.2s;
+            margin-left: 4%;
+            font-size: 16px;
+            font-weight: 800;
+        }
 
-.category-tab.active {
-    color: var(--primary-red);
-    background-color: white;
-    border-bottom: 2px solid var(--primary-red);
-}
+        .nav-item {
+            /* color: white; */
+            cursor: pointer;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+        }
 
-.category-tab:hover {
-    color: var(--primary-red);
-    background-color: white;
-    border-bottom: 2px solid var(--primary-red);
-}
+        .nav-item.active {
+            /* border-color: white; */
+            border-color: var(--primary-red);
+        }
 
-
-/* 三级父区域 */
-
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 30px;
-}
+        .nav-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-red);
+            border-bottom: 3px solid #cc0000;
+        }
 
 
-/* 三级导航样式 */
+        /* 二级父区域 */
+
+        .fullcontainer {
+            /* max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 30px; */
+            width: 100%;
+            background-color: #cc0000cb;
+            padding: 0 8%;
+        }
+
+        #mainTitle {
+            padding-top: 50px;
+            font-size: 41px;
+            color: white;
+            font-weight: 400;
+            /* background-color: aqua; */
+            margin-bottom: 55px;
+        }
 
 
-/* .tertiary-nav {
-    margin: 30px 0 15px;
-    padding-left: 60px;
-    padding-right: 60px;
-} */
+        /* 二级导航 */
 
-.tertiary-nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: -1px;
-    /* 处理某些浏览器边框 */
-    background: white;
-    z-index: 100;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 60px;
-    padding-right: 60px;
-    margin-top: 0;
-    margin-bottom: 0;
-    border-bottom: 2px solid transparent;
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-}
+        .category-tabs {
+            display: flex;
+            gap: 8.5px;
+            /* margin: 20px 0; */
+            border-bottom: 2px solid #eee;
+        }
 
-.tertiary-nav.sticky-border {
-    border-bottom: 2px solid #f10606;
-}
+        .category-tab {
+            background: rgba(255, 255, 255, 0.233);
+            cursor: pointer;
+            color: white;
+            padding: 15px 35px;
+            font-size: 22px;
+            transition: all 0.3s;
+            /* color: var(--text-dark); */
+        }
 
-.tertiary-tabs {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-}
+        .category-tab.active {
+            color: var(--primary-red);
+            background-color: white;
+            border-bottom: 2px solid var(--primary-red);
+        }
 
-.tertiary-tabs::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    border-bottom: 2px dashed #ccc;
-    z-index: 1;
-}
-
-.tertiary-tab {
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding-top: 45px;
-    /* 给圆点预留空间 */
-}
-
-.tertiary-tab::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: white;
-    border: 3px solid var(--primary-red);
-}
+        .category-tab:hover {
+            color: var(--primary-red);
+            background-color: white;
+            border-bottom: 2px solid var(--primary-red);
+        }
 
 
-/* 服务卡片 */
+        /* 三级父区域 */
 
-.service-group {
-    margin: 30px 5px;
-}
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 30px;
+        }
 
-.service-group h3 {
-    color: var(--text-dark);
-    font-size: 18px;
-    margin-bottom: 15px;
-    padding-left: 8px;
-    border-left: 3px solid var(--primary-red);
-}
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 15px;
-}
+        /* 三级导航样式 */
 
-.service-card {
-    padding: 25px 40px;
-    text-align: center;
-    border: 1px solid #eee;
-    /* border-radius: 4px; */
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.198);
-    text-decoration: none;
-    color: var(--text-dark);
-}
 
-.service-card:hover {
-    transform: translateY(-2px);
-    background-color: var(--primary-red);
-    color: white;
-    transition: all 0.4s;
-}
+        /* .tertiary-nav {
+            margin: 30px 0 15px;
+            padding-left: 60px;
+            padding-right: 60px;
+        } */
+
+        .tertiary-nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: -1px;
+            /* 处理某些浏览器边框 */
+            background: white;
+            z-index: 100;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-top: 0;
+            margin-bottom: 0;
+            border-bottom: 2px solid transparent;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            font-size: 18px;
+        }
+
+        .tertiary-nav.sticky-border {
+            border-bottom: 2px solid #f10606;
+        }
+
+        .tertiary-tabs {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .tertiary-tabs::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            border-bottom: 2px dashed #ccc;
+            z-index: 1;
+        }
+
+
+        /* 横版导航 */
+
+        .tertiary-tab {
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 45px;
+        }
+
+
+        /* 竖版导航 */
+
+
+        /* .tertiary-tab {
+            writing-mode: vertical-rl;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            padding-top: 45px;
+        } */
+
+        .tertiary-tab::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid var(--primary-red);
+        }
+
+
+        /* 服务卡片 */
+
+        .service-group {
+            margin: 30px 5px;
+        }
+
+        .service-group h3 {
+            color: var(--text-dark);
+            font-size: 20px;
+            margin-bottom: 15px;
+            padding-left: 8px;
+            border-left: 3px solid var(--primary-red);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 15px;
+        }
+
+        .service-card {
+            padding: 25px 40px;
+            text-align: center;
+            align-items: center;
+            border: 1px solid #eee;
+            /* border-radius: 4px; */
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.198);
+            text-decoration: none;
+            color: var(--text-dark);
+            height: 75px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+            background-color: var(--primary-red);
+            color: white;
+            transition: all 0.4s;
+        }
     </style>  
    
 </head>
+
 <body>
     <!-- 顶部导航 -->
     <div class="header">
         <div class="gov-brand">
-             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo">北京理工大学
-             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo" style="margin-left:50px;">学生服务中心
+             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png"  alt="学校Logo" class="school-logo">北京理工大学
+             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png"  alt="学校Logo" class="school-logo" style="margin-left:50px;">网上服务大厅
         </div>
         <div class="header-links">
             <span>登录</span>
@@ -272,6 +290,7 @@
     </div>
 
     <!-- 主导航 -->
+     <!-- 
     <nav class="main-nav">
         <ul class="nav-items">
             <li class="nav-item active" data-level1="L1个人服务">L1个人服务</li>
@@ -283,11 +302,11 @@
             
         </ul>
     </nav>
-
+    -->
     <!-- 内容区域 -->
     <div class="fullcontainer" >
 
-        <h1 id="mainTitle">北京市法人服务</h1>
+        <h1 id="mainTitle">网上服务大厅（学生版）</h1>
         
         <!-- 二级导航条 -->
         <div class="category-tabs" id="categoryTabs"></div>
@@ -307,206 +326,1138 @@
 // 完整数据结构
 const serviceData = {
     "L1个人服务": {
-        "二级标题": {
-            "社保医保": [
-            {
-                name:"社保卡申领",
-                path:"https://www.baidu.com"
-            },
-            {
-                name:"医保报销申请",
-                path:"www.baidu.com"
-               
-            }],
-            "住房保障": ["公积金提取", "保障房申请"],
-            "三级标题1": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+        "主题": {
+            "校园服务": [
+                {
+                    "name": "学生户籍卡借用申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "北京书院社区场地预约",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "特立社区预约",
+                    "path": "https://i.bit.edu.cn/EIP/reservation/search.htm?resType=8a8082db88708cb501896717cba3415b"
+                },
+                {
+                    "name": "成绩翻译制作申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "综合档案查档预约",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "图库平台",
+                    "path": "https://www.bit.edu.cn/tkpt/"
+                },
+                {
+                    "name": "视觉形象识别系统",
+                    "path": "https://www.bit.edu.cn/gbxxgk/dqgz_sjb/vixx/index.htm"
+                },
+                {
+                    "name": "校园新媒体公共账号备案表",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "班车服务",
+                    "path": "i北理"
+                },
+                {
+                    "name": "后勤报修",
+                    "path": "i北理"
+                },
+                {
+                    "name": "电费充值",
+                    "path": "i北理后勤服务中的一项"
+                },
+                {
+                    "name": "个人酬金查询",
+                    "path": "https://fad.bit.edu.cn/WFManager/home2.jsp"
+                },
+                {
+                    "name": "学生银行卡信息管理",
+                    "path": "https://fad.bit.edu.cn/WFManager/home2.jsp"
+                },
+                {
+                    "name": "缴费平台",
+                    "path": "https://easypay.info.bit.edu.cn/"
+                },
+                {
+                    "name": "学校银行账号及税务信息",
+                    "path": "https://kjhszx.bit.edu.cn/xxyxzhjswxx/index.htm"
+                },
+                {
+                    "name": "发票真伪查验",
+                    "path": "https://inv-veri.chinatax.gov.cn/index.html"
+                },
+                {
+                    "name": "教学日历",
+                    "path": "https://jwb.bit.edu.cn/jxrlsksj/"
+                },
+                {
+                    "name": "本科生成绩单打印申请（盖章版）",
+                    "path": "https://jwc.bit.edu.cn/cjd"
+                },
+                {
+                    "name": "教学周历查看",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/framework/main.jsp?jumpUrl=null"
+                },
+                {
+                    "name": "空闲教室查询",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4768402106681759"
+                },
+                {
+                    "name": "座位（研讨室）预约",
+                    "path": "https://seatlib.bit.edu.cn"
+                },
+                {
+                    "name": "智能填表",
+                    "path": "i北理"
+                },
+                {
+                    "name": "文萃导航",
+                    "path": "i北理"
+                },
+                {
+                    "name": "校园网充值",
+                    "path": "https://dkykt.info.bit.edu.cn/cardpay/openCardRechargeLogin?temporaryopen=true"
+                },
+                {
+                    "name": "校园网外网登陆",
+                    "path": "http://10.0.0.55/srun_portal_success?ac_id=1&ignoreRedirect=1&theme=bit"
+                },
+                {
+                    "name": "正版化软件下载",
+                    "path": "https://ca.bit.edu.cn/index.html"
+                },
+                {
+                    "name": "I北理下载",
+                    "path": "https://itc.bit.edu.cn/fwzn/xxbl/index.htm"
+                },
+                {
+                    "name": "校园卡充值",
+                    "path": "https://dkykt.info.bit.edu.cn/cardpay/openCardRechargeLogin?temporaryopen=true"
+                },
+                {
+                    "name": "闸机人脸补录",
+                    "path": "i北理"
+                },
+                {
+                    "name": "京工飞鸿两校快件寄件",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "京工飞鸿两校快件物流查询",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "京工飞鸿两校快件历史查询",
+                    "path": "https://i.bit.edu.cn/EIP/maindatabase/querymanage/queryResult.htm?queryCode=ywrmcqczbh4snwfe6iyprwkygsqj7jnb"
+                },
+                {
+                    "name": "校园一卡通退费申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "医药费报销代办申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "居住证明",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "智能简历",
+                    "path": "https://jianli.bit.edu.cn/resume"
+                },
+                {
+                    "name": "研究生非京籍证明申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"
+                },
+                {
+                    "name": "硕士研究生报名",
+                    "path": "https://yz.chsi.com.cn/"
+                },
+                {
+                    "name": "博士研究生报名",
+                    "path": "https://yz.bit.edu.cn/yzbm/logon"
+                }
             ],
-            "三级标题2": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "培养环节服务":[
+                {
+                    "name": "专业确认管理系统",
+                    "path": "https://zyqr.bit.edu.cn/zyxzxt/welcome"
+                },
+                {
+                    "name": "本科新生特色培养项目选拔面试结果",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "本科生毕业论文过程管理",
+                    "path": "https://co2.cnki.net"
+                },
+                {
+                    "name": "本科生辅修学位管理",
+                    "path": "https://sxw.bit.edu.cn/"
+                },
+                {
+                    "name": "乐学网络教室",
+                    "path": "https://lexue.bit.edu.cn/"
+                },
+                {
+                    "name": "本科生课程成绩查询与核查",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/framework/main.jsp?jumpUrl=null"
+                },
+                {
+                    "name": "本科生个人学籍管理",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/grxx/xsxx"
+                },
+                {
+                    "name": "本科生素质教育积分申报与管理",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/bysj/gcfk.do"
+                },
+                {
+                    "name": "本科生国际交流项目报名系统",
+                    "path": "https://global.bit.edu.cn"
+                },
+                {
+                    "name": "本科生教学评价",
+                    "path": "https://pj.bit.edu.cn/pjxt2.0/welcome"
+                },
+                {
+                    "name": "本科生学科竞赛管理系统",
+                    "path": "http://xkjs.bit.edu.cn/blg_dxsxkjs_4.0/welcome"
+                },
+                {
+                    "name": "本研课程互选",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5901270617829505"
+                },
+                {
+                    "name": "我的培养方案管理（本科生）",
+                    "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/xsfacx/*default/index.do"
+                },
+                {
+                    "name": "全校课表查询",
+                    "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/kcbcxby/*default/index.do"
+                },
+                {
+                    "name": "特殊学生选课",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5965049791492721"
+                },
+                {
+                    "name": "我的考试安排",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4768687067472349"
+                },
+                {
+                    "name": "我的课表（研究生）",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4979568947762216"
+                },
+                {
+                    "name": "我的课表（本科生）",
+                    "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/wdkbby/*default/index.do"
+                },
+                {
+                    "name": "本科生缓考申请",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4823700623135336"
+                },
+                {
+                    "name": "本科生课程考试报名",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5825962794982045"
+                },
+                {
+                    "name": "免修免考申请",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5365776676932729"
+                },
+                {
+                    "name": "本科生选课系统",
+                    "path": "https://xk.bit.edu.cn/xsxkapp/sys/xsxkapp/*default/index.do"
+                },
+                {
+                    "name": "研究生选课系统",
+                    "path": "https://xk.bit.edu.cn/yjsxkapp/sys/xsxkappbit/index.html"
+                },
+                {
+                    "name": "本科生体测预约",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "研究生学位论文提交",
+                    "path": "http://10.0.7.53:88/urmp/xwlwindex/index/indexsearch.do"
+                },
+                {
+                    "name": "研究生导师双选",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"
+                },
+                {
+                    "name": "研究生成绩查询和打印（含英文）",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生培养计划查询",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生培养环节进展查询",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生课程免修申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生课程转换申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生国际交流项目申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=6E312107F1CC485C9A6C5344AF7718DF"
+                },
+                {
+                    "name": "研究生学位论文过程管理",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=D656B32101D846C696D1C4A0ADD94340"
+                },
+                {
+                    "name": "研究生个人学籍管理",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"
+                },
+                {
+                    "name": "硕士学位论文盲评系统",
+                    "path": "https://pyxt.bit.edu.cn/"
+                },
+                {
+                    "name": "研究生学术成果填报",
+                    "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=183"
+                },
+                {
+                    "name": "研究生竞赛成果填报",
+                    "path": "https://tbs.bit.edu.cn/page/site/info/edit?classifyId=25183c96ec6818818360410e6a5cc61a11"
+                }
             ],
-            "三级标题3": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "学习服务": [
+                {
+                    "name": "延河课堂",
+                    "path": "https://www.yanhekt.cn/home"
+                },
+                {
+                    "name": "统一检索",
+                    "path": "https://ss.zhizhen.com/"
+                },
+                {
+                    "name": "图书借阅",
+                    "path": "https://libsearch.bit.edu.cn/#/Home"
+                },
+                {
+                    "name": "数据库导航",
+                    "path": "https://lib.bit.edu.cn/db/"
+                },
+                {
+                    "name": "电子期刊检索",
+                    "path": "https://sfx-86bit.hosted.exlibrisgroup.com.cn/bit/journalsearch"
+                },
+                {
+                    "name": "电子图书",
+                    "path": "https://libsearch.bit.edu.cn/#/elecBook"
+                },
+                {
+                    "name": "百度学术",
+                    "path": "https://xueshu.baidu.com/"
+                },
+                {
+                    "name": "教参平台",
+                    "path": "https://jiaocan.bit.edu.cn/"
+                },
+                {
+                    "name": "代查代检",
+                    "path": "https://dcdjcme.bit.edu.cn/"
+                },
+                {
+                    "name": "科技查新",
+                    "path": "https://chaxin.bit.edu.cn/"
+                },
+                {
+                    "name": "一站购书",
+                    "path": "http://www.booksfor.net/"
+                },
+                {
+                    "name": "我的图书馆",
+                    "path": "https://libsearch.bit.edu.cn"
+                },
+                {
+                    "name": "图书馆i理微课",
+                    "path": "https://lib.bit.edu.cn/engine2/general/more?t=686C98238CB9ACF2FACF7991CC654C23BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"
+                },
+                {
+                    "name": "馆际互借",
+                    "path": "http://202.112.118.41/UnionQuery1/"
+                },
+                {
+                    "name": "原文传递",
+                    "path": "http://202.112.118.46/balis/reader/index.jsp"
+                },
+                {
+                    "name": "知识图谱工具",
+                    "path": "https://lib.bit.edu.cn/engine2/general/more?t=F7AAC02941ECC3A4F4BCCDFF314C9ED5BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"
+                },
+                {
+                    "name": "文献管理软件",
+                    "path": "https://lib.bit.edu.cn/engine2/general/more?t=133CDAFDF713ED74FACF7991CC654C23BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"
+                },
+                {
+                    "name": "学堂在线",
+                    "path": "https://www.xuetangx.com/"
+                },
+                {
+                    "name": "百家大讲堂",
+                    "path": "i北理"
+                },
+                {
+                    "name": "《北京理工大学学报》投稿系统",
+                    "path": "https://journal.bit.edu.cn/zrb/ch/author/login.aspx"
+                },
+                {
+                    "name": "《深空探测学报》投稿系统",
+                    "path": "https://jdse.bit.edu.cn/sktcxbcn/ch/author/login.aspx"
+                },
+                {
+                    "name": "《学位与研究生教育》投稿系统",
+                    "path": "http://www.adge.edu.cn/ch/author/login.aspx"
+                }
             ],
-            "三级标题4": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
-            ],
-            "三级标题5": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
-            ],
-            "三级标题6": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "学生事务": [
+                {
+                    "name": "心理普查",
+                    "path": "http://10.0.8.157:82/login.aspx"
+                },
+                {
+                    "name": "综合素质评价",
+                    "path": "i北理"
+                },
+                {
+                    "name": "导学热线",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "寒暑假登记",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/jjrlfxapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/register"
+                },
+                {
+                    "name": "荣誉称号",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/rychapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "处分情况",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/wjcf/*default/index.do?THEME=indigo&EMAP_LANG=zh#/violate_examine"
+                },
+                {
+                    "name": "学生请假",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/xsqjapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/wdqj"
+                },
+                {
+                    "name": "助学金申请",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/zxj/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "减免学费与困难资助",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/knbzapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "困难认定",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/knsapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/difficulties"
+                },
+                {
+                    "name": "奖学金",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/jxjapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "迎新服务",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/yxapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/xsbd"
+                },
+                {
+                    "name": "绿色通道",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/lstdapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "学生离校",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/leaveSchool/*default/index.do?THEME=indigo&EMAP_LANG=zh#/leave_single"
+                },
+                {
+                    "name": "奖学金证明申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "就业服务",
+                    "path": "https://job.bit.edu.cn/frontpage/bit/html/index.html"
+                },
+                {
+                    "name": "在读证明",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "学生证补办",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "研究生国家奖学金申报",
+                    "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=180&platform_id=24"
+                },
+                {
+                    "name": "研究生学业奖学金申报",
+                    "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=181"
+                }
             ]
+            
         },
-        "二级标题2": {
-            "三级标题1": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+        "部门分类":{     
+            "教学运行与考务中心": [
+                {
+                    "name": "本研课程互选",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5901270617829505"
+                },
+                {
+                    "name": "我的培养方案管理（本科生）",
+                    "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/xsfacx/*default/index.do?t_s=1701661621293&amp_sec_version_=1&gid_=dCs1NmJUaWh3NDQ2ZzB6MXlLaW56b0N5ejFhUUZvNUN2bEV5M0NFdTloZ2xMREhucG84TWtKanNaQkJCWTNPTFRJd3NRNE1JdEwxYitQQ282M3FENFE9PQ&EMAP_LANG=zh&THEME=cherry#/ckgrpyfa"
+                },
+                {
+                    "name": "空闲教室查询",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4768402106681759"
+                },
+                {
+                    "name": "全校课表查询",
+                    "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/kcbcxby/*default/index.do?t_s=1745890141341&amp_sec_version_=1&gid_=RW11R2V4Q3huRDhXOFVibHBVOXFxZzBXNjF6OWs4K0FjWDEwT1dIeFpzQ21Lb1RLUlZwNVNBUjVoMmZhNjRaMEJGTytTVGM2SXNJRnVxSUZIL1pnYWc9PQ&EMAP_LANG=zh&THEME=cherry#/jskcb"
+                },
+                {
+                    "name": "特殊学生选课",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5965049791492721"
+                },
+                {
+                    "name": "我的考试安排",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4768687067472349"
+                },
+                {
+                    "name": "我的课表（研究生）",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4979568947762216"
+                },
+                {
+                    "name": "我的课表（本科生）",
+                    "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/wdkbby/*default/index.do"
+                },
+                {
+                    "name": "本科生缓考申请",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4823700623135336"
+                },
+                {
+                    "name": "本科生课程考试报名",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5825962794982045"
+                },
+                {
+                    "name": "免修免考申请",
+                    "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5365776676932729"
+                },
+                {
+                    "name": "本科生选课系统",
+                    "path": "https://xk.bit.edu.cn/xsxkapp/sys/xsxkapp/*default/index.do"
+                },
+                {
+                    "name": "研究生选课系统",
+                    "path": "https://xk.bit.edu.cn/yjsxkapp/sys/xsxkappbit/index.html"
+                }
+            ],      
+            "计划财务部": [
+                {
+                    "name": "个人酬金查询",
+                    "path": "https://fad.bit.edu.cn/WFManager/home2.jsp"
+                },
+                {
+                    "name": "学生银行卡信息管理",
+                    "path": "https://fad.bit.edu.cn/WFManager/home2.jsp"
+                },
+                {
+                    "name": "缴费平台",
+                    "path": "https://easypay.info.bit.edu.cn/"
+                },
+                {
+                    "name": "学校银行账号及税务信息",
+                    "path": "https://kjhszx.bit.edu.cn/xxyxzhjswxx/index.htm"
+                },
+                {
+                    "name": "发票真伪查验",
+                    "path": "https://inv-veri.chinatax.gov.cn/index.html"
+                }
             ],
-            "三级标题2": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+             "学生工作部": [
+                {
+                    "name": "百家大讲堂",
+                    "path": "i北理"
+                },
+                {
+                    "name": "心理普查",
+                    "path": "http://10.0.8.157:82/login.aspx"
+                },
+                {
+                    "name": "综合素质评价",
+                    "path": "i北理"
+                },
+                {
+                    "name": "导学热线",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "寒暑假登记",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/jjrlfxapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/register"
+                },
+                {
+                    "name": "荣誉称号",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/rychapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "处分情况",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/wjcf/*default/index.do?THEME=indigo&EMAP_LANG=zh#/violate_examine"
+                },
+                {
+                    "name": "学生请假",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/xsqjapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/wdqj"
+                }
             ],
-            "三级标题3": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "学生服务中心": [
+                {
+                    "name": "助学金申请",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/zxj/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "减免学费与困难资助",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/knbzapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "困难认定",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/knsapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/difficulties"
+                },
+                {
+                    "name": "奖学金",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/jxjapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "迎新服务",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/yxapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/xsbd"
+                },
+                {
+                    "name": "绿色通道",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/lstdapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"
+                },
+                {
+                    "name": "学生离校",
+                    "path": "https://stu.bit.edu.cn/xsfw/sys/leaveSchool/*default/index.do?THEME=indigo&EMAP_LANG=zh#/leave_single"
+                },
+                {
+                    "name": "奖学金证明申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "就业服务",
+                    "path": "https://job.bit.edu.cn/frontpage/bit/html/index.html"
+                },
+                {
+                    "name": "京工飞鸿两校快件寄件",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "京工飞鸿两校快件物流查询",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "京工飞鸿两校快件历史查询",
+                    "path": "https://i.bit.edu.cn/EIP/maindatabase/querymanage/queryResult.htm?queryCode=ywrmcqczbh4snwfe6iyprwkygsqj7jnb"
+                },
+                {
+                    "name": "校园一卡通退费申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "医药费报销代办申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "在读证明",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "居住证明",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "学生证补办",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "智能简历",
+                    "path": "https://jianli.bit.edu.cn/resume"
+                }
             ],
-            "三级标题4": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
-            ]
-        },
-        "二级标题3": {
-            "三级标题1": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "学术期刊中心": [
+                {
+                    "name": "《北京理工大学学报》投稿系统",
+                    "path": "https://journal.bit.edu.cn/zrb/ch/author/login.aspx"
+                },
+                {
+                    "name": "《深空探测学报》投稿系统",
+                    "path": "https://jdse.bit.edu.cn/sktcxbcn/ch/author/login.aspx"
+                },
+                {
+                    "name": "《学位与研究生教育》投稿系统",
+                    "path": "http://www.adge.edu.cn/ch/author/login.aspx"
+                }
             ],
-            "三级标题2": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "后勤基建处": [
+                {
+                    "name": "班车服务",
+                    "path": "i北理"
+                },
+                {
+                    "name": "后勤报修",
+                    "path": "i北理"
+                },
+                {
+                    "name": "电费充值",
+                    "path": "i北理后勤服务中的一项"
+                }
             ],
-            "三级标题3": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "网络信息中心": [
+                {
+                    "name": "智能填表",
+                    "path": "i北理"
+                },
+                {
+                    "name": "文萃导航",
+                    "path": "i北理"
+                },
+                {
+                    "name": "校园网充值",
+                    "path": "https://dkykt.info.bit.edu.cn/cardpay/openCardRechargeLogin?temporaryopen=true"
+                },
+                {
+                    "name": "校园网外网登陆",
+                    "path": "http://10.0.0.55/srun_portal_success?ac_id=1&ignoreRedirect=1&theme=bit"
+                },
+                {
+                    "name": "正版化软件下载",
+                    "path": "https://ca.bit.edu.cn/index.html"
+                },
+                {
+                    "name": "I北理下载",
+                    "path": "https://itc.bit.edu.cn/fwzn/xxbl/index.htm"
+                },
+                {
+                    "name": "校园卡充值",
+                    "path": "https://dkykt.info.bit.edu.cn/cardpay/openCardRechargeLogin?temporaryopen=true"
+                },
+                {
+                    "name": "闸机人脸补录",
+                    "path": "i北理"
+                }
             ],
-            "三级标题4": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
-            ]
-        },
-        "二级标题4": {
-            "三级标题1": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "研究生院": [
+                {
+                    "name": "研究生导师双选",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"
+                },
+                {
+                    "name": "研究生成绩查询和打印（含英文）",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生培养计划查询",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生培养环节进展查询",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生课程免修申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生课程转换申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"
+                },
+                {
+                    "name": "研究生国际交流项目申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=6E312107F1CC485C9A6C5344AF7718DF"
+                },
+                {
+                    "name": "研究生学位论文过程管理",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=D656B32101D846C696D1C4A0ADD94340"
+                },
+                {
+                    "name": "研究生个人学籍管理",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"
+                },
+                {
+                    "name": "研究生非京籍证明申请",
+                    "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"
+                },
+                {
+                    "name": "硕士研究生报名",
+                    "path": "https://yz.chsi.com.cn/"
+                },
+                {
+                    "name": "博士研究生报名",
+                    "path": "https://yz.bit.edu.cn/yzbm/logon"
+                },
+                {
+                    "name": "硕士学位论文盲评系统",
+                    "path": "https://pyxt.bit.edu.cn/"
+                },
+                {
+                    "name": "研究生学术成果填报",
+                    "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=183"
+                },
+                {
+                    "name": "研究生竞赛成果填报",
+                    "path": "https://tbs.bit.edu.cn/page/site/info/edit?classifyId=25183c96ec6818818360410e6a5cc61a11"
+                },
+                {
+                    "name": "研究生国家奖学金申报",
+                    "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=180&platform_id=24"
+                },
+                {
+                    "name": "研究生学业奖学金申报",
+                    "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=181"
+                }
             ],
-            "三级标题2": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "教务部": [
+                {
+                    "name": "专业确认管理系统",
+                    "path": "https://zyqr.bit.edu.cn/zyxzxt/welcome"
+                },
+                {
+                    "name": "延河课堂",
+                    "path": "https://www.yanhekt.cn/home"
+                },
+                {
+                    "name": "本科新生特色培养项目选拔面试结果",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "教学日历",
+                    "path": "https://jwb.bit.edu.cn/jxrlsksj/"
+                },
+                {
+                    "name": "本科生毕业论文过程管理",
+                    "path": "https://co2.cnki.net"
+                },
+                {
+                    "name": "本科生成绩单打印申请（盖章版）",
+                    "path": "https://jwc.bit.edu.cn/cjd"
+                },
+                {
+                    "name": "本科生辅修学位管理",
+                    "path": "https://sxw.bit.edu.cn/"
+                },
+                {
+                    "name": "乐学网络教室",
+                    "path": "https://lexue.bit.edu.cn/"
+                },
+                {
+                    "name": "本科生课程成绩查询与核查",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/framework/main.jsp?jumpUrl=null"
+                },
+                {
+                    "name": "教学周历查看",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/framework/main.jsp?jumpUrl=null"
+                },
+                {
+                    "name": "本科生个人学籍管理",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/grxx/xsxx"
+                },
+                {
+                    "name": "本科生素质教育积分申报与管理",
+                    "path": "http://jwms.bit.edu.cn/jsxsd/bysj/gcfk.do"
+                },
+                {
+                    "name": "本科生国际交流项目报名系统",
+                    "path": "https://global.bit.edu.cn"
+                },
+                {
+                    "name": "本科生教学评价",
+                    "path": "https://pj.bit.edu.cn/pjxt2.0/welcome"
+                },
+                {
+                    "name": "本科生学科竞赛管理系统",
+                    "path": "http://xkjs.bit.edu.cn/blg_dxsxkjs_4.0/welcome"
+                }
             ],
-            "三级标题3": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            
+            "体育部": [
+                {
+                    "name": "本科生体测预约",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                }
             ],
-            "三级标题4": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
-            ]
-        },
-        "二级标题5": {
-            "三级标题1": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "图书馆": [
+                {
+                    "name": "统一检索",
+                    "path": "https://ss.zhizhen.com/"
+                },
+                {
+                    "name": "图书借阅",
+                    "path": "https://libsearch.bit.edu.cn/#/Home"
+                },
+                {
+                    "name": "数据库导航",
+                    "path": "https://lib.bit.edu.cn/db/"
+                },
+                {
+                    "name": "电子期刊检索",
+                    "path": "https://sfx-86bit.hosted.exlibrisgroup.com.cn/bit/journalsearch"
+                },
+                {
+                    "name": "电子图书",
+                    "path": "https://libsearch.bit.edu.cn/#/elecBook"
+                },
+                {
+                    "name": "百度学术",
+                    "path": "https://xueshu.baidu.com/"
+                },
+                {
+                    "name": "座位（研讨室）预约",
+                    "path": "https://seatlib.bit.edu.cn"
+                },
+                {
+                    "name": "教参平台",
+                    "path": "https://jiaocan.bit.edu.cn/"
+                },
+                {
+                    "name": "研究生学位论文提交",
+                    "path": "http://10.0.7.53:88/urmp/xwlwindex/index/indexsearch.do"
+                },
+                {
+                    "name": "代查代检",
+                    "path": "https://dcdjcme.bit.edu.cn/"
+                },
+                {
+                    "name": "科技查新",
+                    "path": "https://chaxin.bit.edu.cn/"
+                },
+                {
+                    "name": "一站购书",
+                    "path": "http://www.booksfor.net/"
+                },
+                {
+                    "name": "我的图书馆",
+                    "path": "https://libsearch.bit.edu.cn"
+                },
+                {
+                    "name": "图书馆i理微课",
+                    "path": "https://lib.bit.edu.cn/engine2/general/more?t=686C98238CB9ACF2FACF7991CC654C23BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"
+                },
+                {
+                    "name": "馆际互借",
+                    "path": "http://202.112.118.41/UnionQuery1/"
+                },
+                {
+                    "name": "原文传递",
+                    "path": "http://202.112.118.46/balis/reader/index.jsp"
+                },
+                {
+                    "name": "知识图谱工具",
+                    "path": "https://lib.bit.edu.cn/engine2/general/more?t=F7AAC02941ECC3A4F4BCCDFF314C9ED5BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"
+                },
+                {
+                    "name": "文献管理软件",
+                    "path": "https://lib.bit.edu.cn/engine2/general/more?t=133CDAFDF713ED74FACF7991CC654C23BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"
+                },
+                {
+                    "name": "学堂在线",
+                    "path": "https://www.xuetangx.com/"
+                }
             ],
-            "三级标题2": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+             "保卫部": [
+                {
+                    "name": "学生户籍卡借用申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                }
             ],
-            "三级标题3": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
+            "北京书院": [
+                {
+                    "name": "北京书院社区场地预约",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                }
             ],
-            "三级标题4": [
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块",
-                "四级子模块"
-            ]
+            "特立书院": [
+                {
+                    "name": "特立社区预约",
+                    "path": "https://i.bit.edu.cn/EIP/reservation/search.htm?resType=8a8082db88708cb501896717cba3415b"
+                }
+            ],
+            "档案馆": [
+                {
+                    "name": "成绩翻译制作申请",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                },
+                {
+                    "name": "综合档案查档预约",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                }
+            ],
+            "新闻中心": [
+                {
+                    "name": "图库平台",
+                    "path": "https://www.bit.edu.cn/tkpt/"
+                },
+                {
+                    "name": "视觉形象识别系统",
+                    "path": "https://www.bit.edu.cn/gbxxgk/dqgz_sjb/vixx/index.htm"
+                },
+                {
+                    "name": "校园新媒体公共账号备案表",
+                    "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"
+                }
+            ],
+            
            
+        },        
+        "场景分类":{
+            "学生管理服务": [
+                {"name": "学生户籍卡借用申请", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "综合档案查档预约", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "心理普查", "path": "http://10.0.8.157:82/login.aspx"},
+                {"name": "导学热线", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "处分情况", "path": "https://stu.bit.edu.cn/xsfw/sys/wjcf/*default/index.do?THEME=indigo&EMAP_LANG=zh#/violate_examine"},
+                {"name": "学生请假", "path": "https://stu.bit.edu.cn/xsfw/sys/xsqjapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/wdqj"},
+                {"name": "就业服务", "path": "https://job.bit.edu.cn/frontpage/bit/html/index.html"},
+                {"name": "在读证明", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "居住证明", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "学生证补办", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "研究生非京籍证明申请", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"}
+            ],
+
+            "校园生活服务": [
+                {"name": "北京书院社区场地预约", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "特立社区预约", "path": "https://i.bit.edu.cn/EIP/reservation/search.htm?resType=8a8082db88708cb501896717cba3415b"},
+                {"name": "班车服务", "path": "i北理"},
+                {"name": "后勤报修", "path": "i北理"},
+                {"name": "电费充值", "path": "i北理后勤服务中的一项"},
+                {"name": "文萃导航", "path": "i北理"},
+                {"name": "校园网充值", "path": "https://dkykt.info.bit.edu.cn/cardpay/openCardRechargeLogin?temporaryopen=true"},
+                {"name": "校园网外网登陆", "path": "http://10.0.0.55/srun_portal_success?ac_id=1&ignoreRedirect=1&theme=bit"},
+                {"name": "校园卡充值", "path": "https://dkykt.info.bit.edu.cn/cardpay/openCardRechargeLogin?temporaryopen=true"},
+                {"name": "闸机人脸补录", "path": "i北理"},
+                {"name": "迎新服务", "path": "https://stu.bit.edu.cn/xsfw/sys/yxapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/xsbd"},
+                {"name": "学生离校", "path": "https://stu.bit.edu.cn/xsfw/sys/leaveSchool/*default/index.do?THEME=indigo&EMAP_LANG=zh#/leave_single"},
+                {"name": "京工飞鸿两校快件寄件", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "京工飞鸿两校快件物流查询", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "京工飞鸿两校快件历史查询", "path": "https://i.bit.edu.cn/EIP/maindatabase/querymanage/queryResult.htm?queryCode=ywrmcqczbh4snwfe6iyprwkygsqj7jnb"},
+                {"name": "校园一卡通退费申请", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "医药费报销代办申请", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"}
+            ],
+
+            "财务服务": [
+                {"name": "个人酬金查询", "path": "https://fad.bit.edu.cn/WFManager/home2.jsp"},
+                {"name": "学生银行卡信息管理", "path": "https://fad.bit.edu.cn/WFManager/home2.jsp"},
+                {"name": "缴费平台", "path": "https://easypay.info.bit.edu.cn/"},
+                {"name": "学校银行账号及税务信息", "path": "https://kjhszx.bit.edu.cn/xxyxzhjswxx/index.htm"},
+                {"name": "发票真伪查验", "path": "https://inv-veri.chinatax.gov.cn/index.html"}
+            ],
+
+            "培养环节管理": [
+                {"name": "专业确认管理系统", "path": "https://zyqr.bit.edu.cn/zyxzxt/welcome"},
+                {"name": "本科新生特色培养项目选拔面试结果", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "本科生毕业论文过程管理", "path": "https://co2.cnki.net"},
+                {"name": "本科生辅修学位管理", "path": "https://sxw.bit.edu.cn/"},
+                {"name": "本科生个人学籍管理", "path": "http://jwms.bit.edu.cn/jsxsd/grxx/xsxx"},
+                {"name": "本科生国际交流项目报名系统", "path": "https://global.bit.edu.cn"},
+                {"name": "我的培养方案管理（本科生）", "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/xsfacx/*default/index.do?t_s=1701661621293&amp_sec_version_=1&gid_=dCs1NmJUaWh3NDQ2ZzB6MXlLaW56b0N5ejFhUUZvNUN2bEV5M0NFdTloZ2xMREhucG84TWtKanNaQkJCWTNPTFRJd3NRNE1JdEwxYitQQ282M3FENFE9PQ&EMAP_LANG=zh&THEME=cherry#/ckgrpyfa"},
+                {"name": "研究生导师双选", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"},
+                {"name": "研究生培养计划查询", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"},
+                {"name": "研究生培养环节进展查询", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"},
+                {"name": "研究生国际交流项目申请", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=6E312107F1CC485C9A6C5344AF7718DF"},
+                {"name": "研究生学位论文过程管理", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=D656B32101D846C696D1C4A0ADD94340"},
+                {"name": "研究生个人学籍管理", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=B500CCBB9FAB4AEF9DE189BB6D5E5691"},
+                {"name": "硕士学位论文盲评系统", "path": "https://pyxt.bit.edu.cn/"}
+            ],
+
+            "自主学习资源": [
+                {"name": "延河课堂", "path": "https://www.yanhekt.cn/home"},
+                {"name": "统一检索", "path": "https://ss.zhizhen.com/"},
+                {"name": "图书借阅", "path": "https://libsearch.bit.edu.cn/#/Home"},
+                {"name": "数据库导航", "path": "https://lib.bit.edu.cn/db/"},
+                {"name": "电子期刊检索", "path": "https://sfx-86bit.hosted.exlibrisgroup.com.cn/bit/journalsearch"},
+                {"name": "电子图书", "path": "https://libsearch.bit.edu.cn/#/elecBook"},
+                {"name": "百度学术", "path": "https://xueshu.baidu.com/"},
+                {"name": "空闲教室查询", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4768402106681759"},
+                {"name": "教参平台", "path": "https://jiaocan.bit.edu.cn/"},
+                {"name": "代查代检", "path": "https://dcdjcme.bit.edu.cn/"},
+                {"name": "科技查新", "path": "https://chaxin.bit.edu.cn/"},
+                {"name": "知识图谱工具", "path": "https://lib.bit.edu.cn/engine2/general/more?t=F7AAC02941ECC3A4F4BCCDFF314C9ED5BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"},
+                {"name": "文献管理软件", "path": "https://lib.bit.edu.cn/engine2/general/more?t=133CDAFDF713ED74FACF7991CC654C23BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"},
+                {"name": "学堂在线", "path": "https://www.xuetangx.com/"}
+            ],
+
+            "课程服务": [
+                {"name": "教学日历", "path": "https://jwb.bit.edu.cn/jxrlsksj/"},
+                {"name": "本科生成绩单打印申请（盖章版）", "path": "https://jwc.bit.edu.cn/cjd"},
+                {"name": "乐学网络教室", "path": "https://lexue.bit.edu.cn/"},
+                {"name": "本科生课程成绩查询与核查", "path": "http://jwms.bit.edu.cn/jsxsd/framework/main.jsp?jumpUrl=null"},
+                {"name": "教学周历查看", "path": "http://jwms.bit.edu.cn/jsxsd/framework/main.jsp?jumpUrl=null"},
+                {"name": "全校课表查询", "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/kcbcxby/*default/index.do?t_s=1745890141341&amp_sec_version_=1&gid_=RW11R2V4Q3huRDhXOFVibHBVOXFxZzBXNjF6OWs4K0FjWDEwT1dIeFpzQ21Lb1RLUlZwNVNBUjVoMmZhNjRaMEJGTytTVGM2SXNJRnVxSUZIL1pnYWc9PQ&EMAP_LANG=zh&THEME=cherry#/jskcb"},
+                {"name": "特殊学生选课", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5965049791492721"},
+                {"name": "我的考试安排", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4768687067472349"},
+                {"name": "我的课表（研究生）", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4979568947762216"},
+                {"name": "我的课表（本科生）", "path": "https://jxzxehallapp.bit.edu.cn/jwapp/sys/wdkbby/*default/index.do"},
+                {"name": "本科生缓考申请", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=4823700623135336"},
+                {"name": "本科生课程考试报名", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5825962794982045"},
+                {"name": "免修免考申请", "path": "https://jxzxehall.bit.edu.cn/portal/html/select_role.html?appId=5365776676932729"},
+                {"name": "本科生选课系统", "path": "https://xk.bit.edu.cn/xsxkapp/sys/xsxkapp/*default/index.do"},
+                {"name": "研究生选课系统", "path": "https://xk.bit.edu.cn/yjsxkapp/sys/xsxkappbit/index.html"},
+                {"name": "研究生成绩查询和打印（含英文）", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"},
+                {"name": "研究生课程免修申请", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"},
+                {"name": "研究生课程转换申请", "path": "https://gms.bit.edu.cn/gmsstu/?wburl=2&menuid=42D739CC5A6B4C9FB7BF60D3A73A369F"},
+                {"name": "本科生教学评价", "path": "https://pj.bit.edu.cn/pjxt2.0/welcome"}
+            ],
+
+            "成果管理": [
+                {"name": "本科生素质教育积分申报与管理", "path": "http://jwms.bit.edu.cn/jsxsd/bysj/gcfk.do"},
+                {"name": "本科生学科竞赛管理系统", "path": "http://xkjs.bit.edu.cn/blg_dxsxkjs_4.0/welcome"},
+                {"name": "综合素质评价", "path": "i北理"},
+                {"name": "荣誉称号", "path": "https://stu.bit.edu.cn/xsfw/sys/rychapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"},
+                {"name": "奖学金", "path": "https://stu.bit.edu.cn/xsfw/sys/jxjapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"},
+                {"name": "奖学金证明申请", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"},
+                {"name": "智能简历", "path": "https://jianli.bit.edu.cn/resume"},
+                {"name": "《北京理工大学学报》投稿系统", "path": "https://journal.bit.edu.cn/zrb/ch/author/login.aspx"},
+                {"name": "《深空探测学报》投稿系统", "path": "https://jdse.bit.edu.cn/sktcxbcn/ch/author/login.aspx"},
+                {"name": "《学位与研究生教育》投稿系统", "path": "http://www.adge.edu.cn/ch/author/login.aspx"},
+                {"name": "研究生学术成果填报", "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=183"},
+                {"name": "研究生竞赛成果填报", "path": "https://tbs.bit.edu.cn/page/site/info/edit?classifyId=25183c96ec6818818360410e6a5cc61a11"},
+                {"name": "研究生国家奖学金申报", "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=180&platform_id=24"},
+                {"name": "研究生学业奖学金申报", "path": "https://tbs.bit.edu.cn/newservice/fe/taskCenter/matterApplication?app_id=181"}
+            ],
+
+            "经济资助项目": [
+                {"name": "助学金申请", "path": "https://stu.bit.edu.cn/xsfw/sys/zxj/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"},
+                {"name": "减免学费与困难资助", "path": "https://stu.bit.edu.cn/xsfw/sys/knbzapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"},
+                {"name": "困难认定", "path": "https://stu.bit.edu.cn/xsfw/sys/knsapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/difficulties"},
+                {"name": "绿色通道", "path": "https://stu.bit.edu.cn/xsfw/sys/lstdapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/apply"}
+            ],
+
+            "其他服务": [
+                {"name": "正版化软件下载", "path": "https://ca.bit.edu.cn/index.html"},
+                {"name": "I北理下载", "path": "https://itc.bit.edu.cn/fwzn/xxbl/index.htm"},
+                {"name": "寒暑假登记", "path": "https://stu.bit.edu.cn/xsfw/sys/jjrlfxapp/*default/index.do?THEME=indigo&EMAP_LANG=zh#/register"},
+                {"name": "一站购书", "path": "http://www.booksfor.net/"},
+                {"name": "我的图书馆", "path": "https://libsearch.bit.edu.cn"},
+                {"name": "图书馆i理微课", "path": "https://lib.bit.edu.cn/engine2/general/more?t=686C98238CB9ACF2FACF7991CC654C23BB053E72E867978CBF180E26FE6F2FA700A35E0AE3B4F30036F87843C5A08D82"},
+                {"name": "馆际互借", "path": "http://202.112.118.41/UnionQuery1/"},
+                {"name": "原文传递", "path": "http://202.112.118.46/balis/reader/index.jsp"},
+                {"name": "座位（研讨室）预约", "path": "https://seatlib.bit.edu.cn"},
+                {"name": "研究生学位论文提交", "path": "http://10.0.7.53:88/urmp/xwlwindex/index/indexsearch.do"},
+                {"name": "本科生体测预约", "path": "https://i.bit.edu.cn/EIP/nonlogin/mixportal/framework.htm?activePersonalHomeTab=false"}
+            ]
         }
+
     },
-    "L1法人服务": {
+    "L1一级标题法人服务": {
         "热门分类L2": {
             "社会保障": [
                 "单位为职工缴存住房公积金",
@@ -516,11 +1467,7 @@ const serviceData = {
                 "住房公积金缴存单位信息变更",
                 "单位申请住房公积金降低缴存比例、缓缴"                
             ],
-            "准营准办": [
-                "北京地区图书、期刊印刷委托备案",
-                "变更广播电视节目制作经营许可",
-                "设立广播电视节目制作经营单位"
-            ],
+            
             "xxL3": [
                 "yyL4",
                 "yyL4",
@@ -528,13 +1475,7 @@ const serviceData = {
                 "yyL4",
                 "yyL4",
                 "yyL4"
-            ],
-            "准营准办": [
-                "北京地区图书、期刊印刷委托备案",
-                "变更广播电视节目制作经营许可",
-                "设立广播电视节目制作经营单位"
-            ],
-            
+            ]           
         },
         "主题分类": {
             "资质认证": ["AAA信用等级认证", "质量管理体系认证"],
@@ -603,8 +1544,8 @@ const serviceData = {
 // 默认选择状态
 let current = {
     level1: "L1个人服务",
-    level2: "二级标题",
-    level3: "社会保障"
+    level2: "主题",
+    level3: "校园服务"
 };
 
 // 初始化
@@ -626,8 +1567,8 @@ function init() {
 
 // 更新界面
 function updateUI() {
-    // 更新主标题
-    document.getElementById('mainTitle').textContent = `北京市${current.level1}`;
+    // 更新主标题（level1）
+    // document.getElementById('mainTitle').textContent = `北京市${current.level1}`;
 
     // 生成二级分类标签
     const level2Options = Object.keys(serviceData[current.level1]);
