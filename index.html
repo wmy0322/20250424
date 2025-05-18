@@ -1,8 +1,10 @@
-f<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>网上服务大厅（学生版）</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         :root {
             --primary-red: #bf0404;
@@ -235,6 +237,18 @@ f<!DOCTYPE html>
         }
 
 
+        /* 三级导航激活状态 */
+
+        .tertiary-tab.active {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .tertiary-tab.active::before {
+            background: var(--primary-red);
+        }
+
+
         /* 服务卡片 */
 
         .service-group {
@@ -273,16 +287,14 @@ f<!DOCTYPE html>
             color: white;
             transition: all 0.4s;
         }
-    </style>  
-   
+   </style>
 </head>
-
 <body>
     <!-- 顶部导航 -->
     <div class="header">
         <div class="gov-brand">
-             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png"  alt="学校Logo" class="school-logo">北京理工大学
-             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png"  alt="学校Logo" class="school-logo" style="margin-left:50px;">网上服务大厅
+             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo">北京理工大学
+             <img src="https://raw.githubusercontent.com/wmy0322/20250424/main/pic/logo.png" alt="学校Logo" class="school-logo" style="margin-left:50px;">网上服务大厅
         </div>
         <div class="header-links">
             <span>登录</span>
@@ -1564,7 +1576,7 @@ function init() {
 
     updateUI();
 }
-
+/* 滚动方式（旧方式）
 // 更新界面
 function updateUI() {
     // 更新主标题（level1）
@@ -1612,6 +1624,58 @@ function updateUI() {
 function changeLevel2(level2) {
     current.level2 = level2;
     current.level3 = Object.keys(serviceData[current.level1][level2])[0];
+    updateUI();
+}
+*/
+
+// 更新界面
+function updateUI() {
+    // 生成二级分类标签
+    const level2Options = Object.keys(serviceData[current.level1]);
+    document.getElementById('categoryTabs').innerHTML = level2Options.map(level2 => `
+        <div class="category-tab ${level2 === current.level2 ? 'active' : ''}" 
+             onclick="changeLevel2('${level2}')">${level2}</div>
+    `).join('');
+
+    // 生成三级导航
+    const level3Data = Object.keys(serviceData[current.level1][current.level2]);
+    const tertiaryTabs = document.getElementById('tertiaryTabs');
+    tertiaryTabs.innerHTML = level3Data.map(level3 => `
+        <div class="tertiary-tab ${level3 === current.level3 ? 'active' : ''}" 
+             onclick="changeLevel3('${level3}')">
+            ${level3}
+        </div>
+    `).join('');
+
+    // 生成服务内容（只显示当前选中的三级分类内容）
+    document.getElementById('serviceContainer').innerHTML = `
+        <section class="service-group">
+            <h3>${current.level3}</h3>
+            <div class="service-grid">
+                ${serviceData[current.level1][current.level2][current.level3].map(item => `
+                <a class="service-card"
+                   href="${item.path}" 
+                   target="${item.target || '_blank'}"  
+                   rel="noopener noreferrer">  
+                    ${item.icon || ''}
+                    ${item.name}
+                </a>
+                `).join('')}
+            </div>
+        </section>
+    `;
+}
+
+// 切换二级分类
+function changeLevel2(level2) {
+    current.level2 = level2;
+    current.level3 = Object.keys(serviceData[current.level1][level2])[0];
+    updateUI();
+}
+
+// 新增：切换三级分类
+function changeLevel3(level3) {
+    current.level3 = level3;
     updateUI();
 }
 
